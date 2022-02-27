@@ -6,22 +6,12 @@ class PluralithHomebrewTap < Formula
   desc "Testing"
   homepage "https://pluralith.com"
   version "0.1.4"
-
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Pluralith/pluralith-homebrew-tap/releases/download/v0.1.4/pluralith_cli_darwin_amd64_v0.1.4.tar.gz"
-      sha256 "7af25f432e829e487338bd952c8fd7cd83d9246efd351491b8dea44efd5273af"
-
-      def install
-        bin.install "pluralith"
-      end
-    end
-  end
+  depends_on :linux
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Pluralith/pluralith-homebrew-tap/releases/download/v0.1.4/pluralith_cli_linux_amd64_v0.1.4.tar.gz"
-      sha256 "e93ca52727fdcb10da38f9cab445e4e1135364bd3c8b957c97af6e21c497a8a1"
+      url "https://github.com/Pluralith/pluralith-homebrew-tap/releases/download/v0.1.4/pluralith-homebrew-tap_0.1.4_linux_amd64.tar.gz"
+      sha256 "5e4bb348db70625b33b413a9862c9aacd43766a4968dcbadb99c3bfce2198464"
 
       def install
         bin.install "pluralith"
