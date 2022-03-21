@@ -5,12 +5,12 @@
 class Pluralith < Formula
   desc "Pluralith is a tool for Terraform state visualisation and automated infrastructure documentation"
   homepage "https://pluralith.com"
-  version "0.1.5"
+  version "0.1.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Pluralith/pluralith-cli/releases/download/v0.1.5/pluralith_cli_tap_darwin_amd64_v0.1.5.tar.gz"
-      sha256 "a4ec776317f1fa8e347e78f118ef3d3a2410431e44b5f1e3cd29330d7428513c"
+      url "https://github.com/Pluralith/pluralith-cli/releases/download/v0.1.6/pluralith_cli_tap_darwin_amd64_v0.1.6.tar.gz"
+      sha256 "a1c0f36e1498141fced91bab04136dbb3bb38b1b233443d8d2fdc5d84b8e2b60"
 
       def install
         bin.install "pluralith"
@@ -20,8 +20,8 @@ class Pluralith < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Pluralith/pluralith-cli/releases/download/v0.1.5/pluralith_cli_tap_linux_amd64_v0.1.5.tar.gz"
-      sha256 "7f31913e9c69fc2395363701e592897023b5f9d57ef12e30e4b1aa6b28c618d9"
+      url "https://github.com/Pluralith/pluralith-cli/releases/download/v0.1.6/pluralith_cli_tap_linux_amd64_v0.1.6.tar.gz"
+      sha256 "6b89a3a83cd277d9f53313185b81c394dc65e89a13cec77b14f65387ccea7526"
 
       def install
         bin.install "pluralith"
