@@ -5,23 +5,31 @@
 class Pluralith < Formula
   desc "Pluralith is a tool for Terraform state visualisation and automated infrastructure documentation"
   homepage "https://pluralith.com"
-  version "0.1.6"
+  version "0.1.10"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Pluralith/pluralith-cli/releases/download/v0.1.6/pluralith_cli_tap_darwin_amd64_v0.1.6.tar.gz"
-      sha256 "a1c0f36e1498141fced91bab04136dbb3bb38b1b233443d8d2fdc5d84b8e2b60"
+    url "https://github.com/Pluralith/pluralith-cli/releases/download/v0.1.10/pluralith_cli_tap_darwin_amd64_v0.1.10.tar.gz"
+    sha256 "f7d1779b1e767e64937fcdc0bce9b3249e5209d3174d99ccde4b960acd8b1e0d"
 
-      def install
-        bin.install "pluralith"
+    def install
+      bin.install "pluralith"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Pluralith
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Pluralith/pluralith-cli/releases/download/v0.1.6/pluralith_cli_tap_linux_amd64_v0.1.6.tar.gz"
-      sha256 "6b89a3a83cd277d9f53313185b81c394dc65e89a13cec77b14f65387ccea7526"
+      url "https://github.com/Pluralith/pluralith-cli/releases/download/v0.1.10/pluralith_cli_tap_linux_amd64_v0.1.10.tar.gz"
+      sha256 "8a233fdf1cbcd623bec256a8bdd2c8285b013b027b5189d0957d05950f11f94b"
 
       def install
         bin.install "pluralith"
