@@ -9,7 +9,7 @@ class Pluralith < Formula
 
   on_macos do
     url "https://github.com/Pluralith/pluralith-cli/releases/download/v0.1.10/pluralith_cli_tap_darwin_amd64_v0.1.10.tar.gz"
-    sha256 "f7d1779b1e767e64937fcdc0bce9b3249e5209d3174d99ccde4b960acd8b1e0d"
+    sha256 "df89ae14681f375969127d694f79a0c113a13e3af1a1e56837eb73b59d68891f"
 
     def install
       bin.install "pluralith"
@@ -29,7 +29,7 @@ class Pluralith < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/Pluralith/pluralith-cli/releases/download/v0.1.10/pluralith_cli_tap_linux_amd64_v0.1.10.tar.gz"
-      sha256 "8a233fdf1cbcd623bec256a8bdd2c8285b013b027b5189d0957d05950f11f94b"
+      sha256 "bd864e45f641a6f8d0eef5c4000a670c8ec3597beae14fd21eaeb4a69aff4a34"
 
       def install
         bin.install "pluralith"
